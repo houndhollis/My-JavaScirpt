@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      h2{
+          text-align: center;
+      }
+      div{
+          border: 1px solid black;
+      }
+      li{
+          border: 1px solid red;
+          width: 50px;
+      }
+    </style>
+</head>
+<body>
+    <h2>우리집!</h2>
+    <div>
+        <ul>
+            <li>노트북</li>
+            <li>모니터</li>
+            <li>책상</li>
+            <li>발판</li>
+            <li>쓰레빠</li>
+            <li>꼬미</li>
+            <li>마우스</li>
+            <li>키보드</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const items = document.querySelector('ul')
+    items.addEventListener('click',(e)=>{
+        console.log(e) //노드 이름을 이용하기 딱좋다.
+        if(e.target.nodeName === 'LI'){
+            e.target.style.background = 'blue'
+        }
+        else{
+            e.target.style.background = 'red'
+        }
+    })
+</script>
+</html>
